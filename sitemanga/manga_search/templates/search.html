@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <h1>Buscar Mangás</h1>
+    <form method="post" action="{% url 'search' %}">
+        {% csrf_token %}
+        <input type="text" name="query" placeholder="Digite o título do mangá">
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>
